@@ -4,11 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"defer ></script>
     <title>Rock Papper Scissors</title>
 </head>
 <body>
+     <!--         
+ <i class="fa-solid fa-question" id="question-mark"></i>
+-->
+    <header>
+          <div class="head">
+               <h1>Rock Paper Scissors</h1>
+          </div>
+          <div class="objective-wrapper">
+               <h4>First One To Score 5 Wins</h4>
+          </div>
+    </header>
+    <main class="wrapper">
+         <div class="left-side">
+              <div class="player-details">
+                  <div class="player-title">
+                       <h3>You :</h3>
+                  </div>
+                   <div class="player-score-wrapper">
+                       <span class="player-score">0</span>
+                   </div>         
+              </div>
+              <div class="question-mark-wrapper">
+                 <i class="fa-solid fa-question" id="question-mark"></i>
+             </div>  
+         </div>
+         <div class="right-side">
+              <div class="computer-details">
+                  <div class="computer-title">
+                      <h3>AI :</h3>
+                  </div>
+                   <div class="computer-score-wrapper">
+                       <span class="computer-score">0</span>
+                   </div>
+              </div>
+              <div class="question-mark-wrapper">
+                 <i class="fa-solid fa-question" id="question-mark"></i>
+             </div>
+         </div>
+    </main>
+    <div class="player-choice-wrapper">
+       <img src="images\rock-img.png" alt="" class="player-choice">
+       <img src="images\paper.png" alt="" class="player-choice">
+       <img src="images\scissors.png" alt="" class="player-choice">
+    </div>
     
 </body>
 </html>
