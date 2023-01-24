@@ -20,6 +20,9 @@
           <div class="objective-wrapper">
                <h4>First One To Score 5 Wins</h4>
           </div>
+          <div class="result-title-wrapper" >
+              <h2 class="result-title hidden"> </h2>
+          </div>
     </header>
     <main class="wrapper">
          <div class="left-side">
@@ -33,6 +36,9 @@
               </div>
               <div class="question-mark-wrapper">
                  <i class="fa-solid fa-question" id="question-mark"></i>
+             </div>
+              <div class="player-choice-wrapper">
+                  <img class="player-choice hidden">
              </div>  
          </div>
          <div class="right-side">
@@ -45,15 +51,22 @@
                    </div>
               </div>
               <div class="question-mark-wrapper">
-                 <i class="fa-solid fa-question" id="question-mark"></i>
+                 <i class="fa-solid fa-question"></i>
              </div>
+             <div class="computer-choice-wrapper">
+                <img class="computer-choice hidden">
+            </div>  
          </div>
     </main>
-    <div class="player-choice-wrapper">
-       <img src="images\rock-img.png" alt="" class="player-choice">
-       <img src="images\paper.png" alt="" class="player-choice">
-       <img src="images\scissors.png" alt="" class="player-choice">
+    <div class="option-wrapper">
+       <img src="images\rock-img.png" alt="" class="option" id="rock">
+       <img src="images\paper.png" alt="" class="option" id="paper">
+       <img src="images\scissors.png" alt="" class="option" id="scissors">
     </div>
-    
+    <div class="modal-wrapper">
+        <div class="modal">
+            
+        </div>
+    </div>
 </body>
 </html>

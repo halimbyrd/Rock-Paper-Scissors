@@ -11,7 +11,7 @@ body {
 
 
 
-.head, .objective-wrapper {
+.head, .objective-wrapper, .result-title-wrapper {
     display: flex;
     justify-content: center;
     color: white;
@@ -29,6 +29,12 @@ body {
     color: red;
 }
 
+.result-title {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
 
 
 
@@ -73,7 +79,7 @@ body {
 .question-mark-wrapper {
     color: white;
     position: relative;
-    left: 70px;
+    left: 80px;
     margin-top: 30px;
     font-size: 130px;
 
@@ -81,11 +87,41 @@ body {
 
 
 
-.player-choice-wrapper {
+.option-wrapper {
     display: flex;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform:translate(-50%,-50%);
 }
 
-.player-choice-wrapper img {
-    width: 100px;
-    height: 100px
+.option-wrapper img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-right: 10px;
 }
+
+
+.hidden {
+    display: none;
+}
+
+
+.player-choice-wrapper, .computer-choice-wrapper {
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+
+
+
+/* hidden*/
+
+.player-choice, .computer-choice {
+    height: 150px;
+    width: 150px;
+}
+
+/* hidden */
