@@ -5,9 +5,12 @@ const computerChoice = document.querySelector('.computer-choice')
 let playerScore = document.querySelector('.player-score');
 let computerScore = document.querySelector('.computer-score');
 let resultTitle = document.querySelector('.result-title');
+const restartBtn = document.querySelector('.restart-btn');
+const modalOverlay = document.querySelector('.modal-overlay');
+const gameResult = document.querySelector('.game-result');
 
 
-console.log(playerScore, computerScore)
+console.log(playerScore, computerScore);
 
 let playerPoints = 0;
 playerScore.textContent = playerPoints;
@@ -32,7 +35,7 @@ options.forEach(function(option) {
 
 
        
-        computerChoice.classList.remove('hidden')
+        computerChoice.classList.remove('hidden');
 
         function getComputerSelection() {
             let random = Math.floor(Math.random() * options.length);
@@ -51,7 +54,7 @@ options.forEach(function(option) {
 
 
 
-        function getResult() {
+        function scenarios() {
 
 
            if(player === 'rock' && computer === 'scissors') {
@@ -88,20 +91,47 @@ options.forEach(function(option) {
              else if (player === computer) {
                 resultTitle.textContent = 'ITS A TIE';
              }
+        };
 
-          
+        scenarios();
+
+
+        
+       function getResult() {
+           if(playerPoints === 5 ) {  
+           modalOverlay.classList.remove('hidden');
+           gameResult.textContent = 'YOU WON';
+           
         }
-
-
+         else if(computerPoints === 5 ) {
+            modalOverlay.classList.remove('hidden');
+           gameResult.textContent = 'YOU LOST';
+         }
+       }
+        
         getResult()
-        
 
-
-
-        
     });
 });
 
 
 
+// for modal 
 
+function restartGame() {
+    restartBtn.addEventListener('click', function() {
+        modalOverlay.classList.add('hidden');
+
+        resultTitle.classList.add('hidden');
+       
+         playerPoints = 0;
+       playerScore.textContent = playerPoints;
+
+        computerPoints = 0;
+      computerScore.textContent = computerPoints;
+       
+    })
+    
+}
+
+restartGame()
